@@ -8,6 +8,7 @@
 8 testato il funzionamento di ricevute.php riga 101 su http://phptester.net/ (money_format non esiste su windows)
 	8.1 sostituito money_format("%.2n",$r->importo) con sprintf("%.2f",$r->importo) stesso identico funzionamento
 9 ricevute.php riga 56 sostituito $opt->id==$id con $opt->id==$record->clienti_id
+10 ricevute.php riga 85 sostituito $ma con $record
 
 inizio consegna
 .1 troppo menoso da spiegare
