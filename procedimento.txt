@@ -1,0 +1,23 @@
+1 ho cambiato le impostazioni di configurazione di uniserver su development (probabile problema con R::freeze(FALSE);)
+2 ho creato il db vuoto e creato un nuovo utente
+3 ho settato il db in index correttamente
+4 corretto errore index.php riga 23 <?php
+5 corretto errore clienti.php riga 28 come sopra
+6 inserito un cliente dalla pagina
+7 inserito un ricevuta dalla pagina
+8 testato il funzionamento di ricevute.php riga 101 su http://phptester.net/ (money_format non esiste su windows)
+	8.1 sostituito money_format("%.2n",$r->importo) con sprintf("%.2f",$r->importo) stesso identico funzionamento
+9 ricevute.php riga 56 sostituito $opt->id==$id con $opt->id==$record->clienti_id
+
+inizio consegna
+.1 troppo menoso da spiegare
+
+.2 ricevute.php riga 48 aggiunto max="<?=date("Y-m-d")?>" al tag input
+
+.3 	1 clienti.php riga 44 duplicato <input name="nome"  value="<?=$dt->nome?>"  /> per email, telefono, cellulare esempio: <input name="email"  value="<?=$dt->email?>"  />
+	2 clienti.php riga 57 (60 dopo le modifiche) duplicato <input name="nome" placeholder="Nome" autofocus /> per email, telefono, cellulare esempio:  <input name="email" placeholder="Email" autofocus />
+	3 ricevute.php riga 44/45/46 inserito <label for="numero">Numero</label> <input name="numero"  value="<?=($record->numero)?>"/>
+	4 ricevute.php riga 91 inserito <th>Numero</th>
+	5 ricevute.php riga 106/107 inserito <td><?=($r->numero)?></td>
+
+.4 duplicato funzionamento di ricevute (form inserimento) in ricevuta con design semplificato
